@@ -1,0 +1,312 @@
+/* Global Rules */
+:root{
+    --main-color: #eeeeee;
+    --font-color: #888;
+    --red-color: #f44336;
+    --blue-color: #0075ff;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --main-transition: 0.3s;
+    --main-raduis: 10px;
+  }
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+   html{
+    scroll-behavior: smooth;
+   }
+   body{
+    font-family: "Open Sans", sans-serif;
+    background-color: #f1f5f9;
+    margin: 0;
+   }
+   ul{
+    list-style: none;
+    padding:0;
+    margin: 0;
+   }
+   a{
+    text-decoration: none;
+   }
+   .container{
+      padding-left: 0;
+      padding-right: 0;
+      margin-right: 20px;
+      margin-left: 220px;
+   }
+   
+   
+/* Component */
+   .main-title{
+      font-size: 30px;
+      text-transform: capitalize;
+      font-weight: bold;
+      position: relative;
+      width: fit-content;
+      z-index: -1;
+      padding-bottom: 10px;
+   }
+   .main-title::after,
+   .main-title::before{
+      content: "";
+      position: absolute;
+      height: 3px;
+      bottom: -5px;
+      left: 0;
+   }
+   .main-title::after{
+      width: 100%;
+      background-color: white;
+   }
+   .main-title::before{
+      width: 35%;
+      background-color: black;
+      z-index: 1;
+   }
+   .main-tag{
+     font-size: 18px;
+     margin-top: 4px;
+   }
+   .main-span{
+    color: var(--font-color);
+    margin-top: -10px;
+    display: block;
+    font-size: 15px;
+   }
+   .big-box{
+      background-color: #ffff;
+      border-radius: var(--main-raduis);
+      overflow: hidden;
+      padding: 20px;
+   }
+/* Header */
+ header{
+    background-color: #ffff;
+    box-shadow: 0 2px 10px rgb(0 0 0 / 20%);
+    position: fixed;
+    height: 100%;
+    width: 200px;
+ }
+ header h2{
+    font-size: 20px;
+    position: relative;
+    text-align: center;
+ }
+ header h2::after,
+ header h2::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: black;
+    display: flex;
+ }
+ header h2::after{
+    width: calc(100% - 122px);
+    height: 2px;
+    top: 40px;
+ }
+ header h2::before{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    top: 29px;
+    border: 5px solid #ffff;
+    z-index: 1;
+ }
+ header ul{
+    padding: 20px 20px 0;
+ }
+ header ul li a{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    color: black;
+    transition: var(--main-transition);
+ }
+ header ul li a.active,
+ header ul li a:hover{
+    background-color: #f6f6f6;
+   
+ }
+ header ul li a span{
+    display: flex;
+    margin-left: 10px;
+ }
+ header ul li a i{
+    font-size: 15px;
+ }
+@media (max-width:767px){
+   header{
+      width: 60px;
+   }
+   header h2{
+      font-size: 15px;
+   }
+   header h2::after,
+   header h2::before{
+      display: none;
+   }
+   header ul{
+      margin-top: -20px;
+   }
+   header ul li a{
+      padding: 10px 20px;
+      justify-content: center;
+      margin-left: 50%;
+      transform: translateX(-50%);
+   }
+   header ul li a span{
+      display: none;
+   }
+}
+
+/* Keyword */
+  .keyword {
+   background-color: #ffff;
+   height: 70px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 20px 0 220px;
+  }
+  @media (max-width: 767px){
+   .keyword{
+      padding: 0 20px 0 80px;
+   }
+   .keyword form{
+      padding-right: 40px;
+   }
+   .keyword .keyword-image{
+      padding-right: 20px;
+   }
+  }
+  .keyword form{
+   display: flex;
+  }
+  .keyword form i{
+    color: var(--font-color);
+    padding: 10px 5px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  .keyword form input{
+   border: 1px solid #ccc;
+   border-left: none;
+   border-top-right-radius: 8px;
+   border-bottom-right-radius: 8px;
+   transition: var(--main-transition);
+  }
+  .keyword form input:focus{
+   outline: none;
+   padding-right: 20px;
+  }
+  .keyword form input:focus::placeholder{
+   opacity: 0;
+  }
+  .keyword .keyword-image{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+  .keyword .keyword-image .icon{
+   position: relative;
+  }
+  .keyword .keyword-image .icon i{
+   margin-right: 15px;
+   font-size: 20px;
+   display: flex;
+  }
+  .keyword .keyword-image .icon::before{
+   content: "";
+   position: absolute;
+   width: 10px;
+   height: 10px;
+   top: -5px;
+   right: 9px;
+   background-color: var(--red-color);
+   border-radius: 50%;
+  }
+  .keyword .keyword-image img{
+   width: 35px;
+  }
+ /* Projects */
+ .projects .container{
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
+   gap: 20px;
+ }
+ .projects .big-box{
+   position: relative;
+ }
+ .projects .big-box .date{
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   color: var(--font-color);
+   font-size: 13px;
+ }
+ .projects .big-box .images{
+   margin-top: 25px;
+   padding: 10px 0;
+   border-bottom: 1px solid #eeee;
+ }
+ .projects .big-box .images img{
+   width: 40px;
+   border-radius: 50%;
+   border: 2px solid white;
+   margin-right: -20px;
+ }
+ .projects .big-box .lang{
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   padding: 20px 0;
+   border-bottom: 1px solid #eeee;
+ }
+ .projects .big-box .lang span{
+   margin-right: 10px;
+   display: inline;
+   font-size: 13px;
+   background-color: #eeeeee;
+   padding: 5px 10px;
+   border-radius: 6px;
+ }
+ .projects .big-box .progress{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+ .projects .big-box .progress .pro{
+   background-color: #eeee;
+   width: 280px;
+   height: 10px;
+   border-radius: 10px;
+   overflow: hidden;
+ }
+ .projects .big-box .progress .pro span{
+   display: block;
+ }
+ .projects .big-box .red .pro span{
+  background-color: var(--red-color); 
+ }
+ .projects .big-box .green .pro span{
+   background-color: var(--green-color); 
+  }
+ .projects .big-box .blue .pro span{
+   background-color: var(--blue-color); 
+  }
+ .projects .big-box .progress p{
+   color: var(--font-color);
+ }
+ @media (max-width:767px){
+   .container{
+      margin-left: 90px;
+   }
+ }

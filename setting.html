@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="css/normaliz" />
+    <link rel="stylesheet" href="css/setting.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <h2>ElZero</h2>
+        <ul>
+          <li>
+            <a href="./Dashboard.html">
+                <i class="fa-regular fa-chart-bar fa-fw"></i>
+                <span>Dashboard</span>
+            </a>
+         </li>
+         <li>
+            <a href="./setting.html" class="active">
+                <i class="fa-solid fa-gear fa-fw"></i>
+                <span>Settings</span>
+            </a>
+         </li>
+         <li>
+            <a href="./profile.html">
+                <i class="fa-regular fa-user fa-fw"></i>
+                <span>Profile</span>
+            </a>
+         </li>
+         <li>
+            <a href="./projects.html">
+                <i class="fa-solid fa-diagram-project fa-fw"></i>
+                <span>Projects</span>
+            </a>
+         </li>
+         <li>
+            <a href="./courses.html">
+                <i class="fa-solid fa-graduation-cap fa-fw"></i>
+                <span>Courses</span>
+            </a>
+         </li>
+         <li>
+            <a href="./friends.html">
+                <i class="fa-regular fa-circle-user fa-fw"></i>
+                <span>Friends</span>
+            </a>
+         </li>
+         <li>
+            <a href="./files.html">
+                <i class="fa-regular fa-file fa-fw"></i>
+                <span>Files</span>
+            </a>
+         </li>
+         <li>
+            <a href="./plans.html">
+                <i class="fa-regular fa-credit-card fa-fw"></i>
+                <span>Plans</span>
+            </a>
+         </li>
+        </ul>
+    </header>
+   <!--Keyword-->
+    <div class="keyword">
+        <form>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="search" placeholder="Type A Keyword">
+        </form>
+        <div class="keyword-image">
+           <div class="icon"><i class="fa-regular fa-bell"></i></div>
+            <img src="./images/avatar.png" alt="" >
+        </div>
+    </div>
+    <!--Setting-->
+    <div class="setting">
+        <div class="container"><h2 class="main-title">Setting</h2></div>
+        <div class="container">
+    <!--Site Control-->
+    <div class="site big-box" >
+        <h2 class="main-tag">Site Control</h2>
+        <span class="main-span">Control The Website If There Is Maintenance</span>
+        <div class="control">
+            <div class="txt">
+                <p>Website Control</p>
+                <span>Open/Close Website And Type The Reason</span>
+            </div>
+            <input type="checkbox" class="check">
+        </div>
+        <textarea placeholder="Close Message Content"></textarea>
+    </div>
+    <!--General Info-->
+    <div class="general big-box">
+        <h2 class="main-tag">General Info</h2>
+        <span class="main-span">General Information About Your Account</span>
+            <div>
+            <label>First Name</label><br>
+            <input type="text" placeholder="First Name">
+            </div>
+            <div>
+            <label>Last Name</label><br>
+            <input type="text" placeholder="Last Name">
+            </div>
+            <div>
+            <label>Email</label><br>
+            <input type="email" placeholder="Emial" disabled>
+            <a href="#">Change</a>
+            </div>
+    </div>
+    <!--Security Info-->
+    <div class="security big-box">
+        <h2 class="main-tag">Security Info</h2>
+        <span class="main-span">Security Information About Your Account</span>
+        <div class="contain">
+            <div class="box one">
+                <div class="txt">
+                    <p>Password</p>
+                    <span>Last Change On 25/10/2021</span>
+                </div>
+                <a href="#">Change</a>
+            </div>
+            <div class="box two">
+                <div class="txt">
+                    <p>Two-Factor Authentication</p>
+                    <span>Enable/Disable The Feature</span>
+                </div>
+                <input type="checkbox" class="check">
+            </div>
+            <div class="box three">
+                <div class="txt">
+                    <p>Devices</p>
+                    <span>Check The Login Devices List</span>
+                </div>
+                <a href="#">Devices</a>
+            </div>
+        </div>
+    </div>
+    <!--Social Info-->
+    <div class="social big-box">
+        <h2 class="main-tag">Social Info</h2>
+        <span class="main-span">Social Media Information</span>
+        <form>
+            <div>
+            <i class="fa-brands fa-twitter"></i>
+            <input type="email" placeholder="Twitter Username"><br>
+           </div>
+           <div>
+            <i class="fa-brands fa-facebook-f"></i>
+            <input type="email" placeholder="Facebook Username"><br>
+           </div>
+           <div>
+            <i class="fa-brands fa-linkedin"></i>
+            <input type="email" placeholder="Linkedin Username"><br>
+           </div>
+           <div>
+            <i class="fa-brands fa-youtube"></i>
+            <input type="email" placeholder="Youtube Username">
+          </div>
+        </form>
+    </div>
+    <!--Widgets Control-->
+    <div class="widgets big-box">
+        <h2 class="main-tag">Widgets Control</h2>
+        <span class="main-span">Show/Hide Widgets</span>
+        <form>
+            <label><input type="checkbox" >Quick Draft</label><br>
+            <label><input type="checkbox" >Yearly Targets</label><br>
+            <label><input type="checkbox" >Tickets Statistics</label><br>
+            <label><input type="checkbox" >Latest News</label><br>
+            <label> <input type="checkbox" >Latest Tasks</label><br>
+            <label><input type="checkbox" >Top Search Items</label>
+        </form>
+    </div>
+    <!--Backup Manager-->
+    <div class="backup big-box">
+        <h2 class="main-tag">Backup Manager</h2>
+        <span class="main-span">Show/Hide Widgets</span>
+        <div class="radio-sec">
+            <label><input type="radio" name="fff">Daily</label><br>
+            <label><input type="radio" name="fff">Daily</label><br>
+            <label><input type="radio" name="fff">Daily</label>
+        </div>
+        <div class="set">
+            <input type="checkbox" class="one">
+            <input type="checkbox" class="two">
+            <input type="checkbox" class="three">
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>
